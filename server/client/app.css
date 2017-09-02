@@ -1,0 +1,58 @@
+.header {
+  text-align: center;
+  color: #F2F2F2;
+  background-color: #146EB1;
+  height: 45px;
+}
+
+main {
+  display: flex;
+}
+
+.empty-status {
+  margin: 20px auto;
+}
+
+.single-status {
+  height: 75px;
+  margin-bottom: 3px;
+  background-color: #D0D0D0;
+  padding-left: 10px;
+  font-size: 16px;
+  color: #052045;
+}
+
+.single-status p {
+  line-height: 75px;
+}
+
+.bulb-icon {
+  margin-right: 6px;
+}
+
+.bulb-on {
+  color: #F4FF05;
+}
+
+.statuses {
+  width: 100%;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #F2F2F2;
+}
+
+/* Desktops */
+@media only screen and (min-width: 768px) {
+  .statuses {
+    width: 50%;
+  }
+}
+
+/* Tablets */
+@media only screen and (min-width: 600px) {
+  .statuses {
+    width: 75%;
+  }
+}

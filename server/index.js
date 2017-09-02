@@ -12,8 +12,14 @@ app.use(express.static('client'))
 
 // Expects API Call from Arduino Board
 app.post('/api/switch', (req, res, next) => {
-  let payload = {uuid: req.body}
-  pusher.trigger('likes', 'like', payload)
+  if(req.body.key != config.key)
+    return res.json({error: 401})
+
+  let payload = {
+    'room': req.body.room,
+    'status': req.body.status
+  }
+  pusher.trigger('statuses', 'new_status', payload)
 
   res.json({success: 200})
 })
